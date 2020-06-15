@@ -2,4 +2,8 @@
     <string name="app_name">Aysun Matematicas</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_cont_help">ContHelpActivity</string>
+    <string name="tab_text_1">Ayuda</string>
+    <string name="tab_text_2">Ayuda Nombre</string>
+    <string name="title_activity_help">helpActivity</string>
 </resources>

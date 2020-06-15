@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/startFrag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.InicioFragment">
@@ -32,13 +33,13 @@
         android:text="NA"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toTopOf="@+id/configButton"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/userButton"
         style="@style/Widget.AppCompat.ActionButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -49,14 +50,15 @@
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="101dp"
         android:background="#F44336"
-        android:src="@android:drawable/ic_media_play"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_myplaces"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintStart_toEndOf="@+id/helpoButton"
+        app:layout_constraintTop_toBottomOf="@+id/configButton" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/helpoButton"
         style="@style/Widget.AppCompat.ActionButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -67,14 +69,15 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="25dp"
         android:background="#F44336"
-        android:src="@android:drawable/ic_media_play"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_help"
+        app:layout_constraintBottom_toBottomOf="@+id/userButton"
+        app:layout_constraintEnd_toStartOf="@+id/userButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+        app:layout_constraintTop_toTopOf="@+id/userButton" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/configButton"
         style="@style/Widget.AppCompat.ActionButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -85,14 +88,15 @@
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="35dp"
         android:background="#F44336"
-        android:src="@android:drawable/ic_media_play"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_manage"
+        app:layout_constraintBottom_toTopOf="@+id/userButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintStart_toEndOf="@+id/botonIniciar"
         app:layout_constraintTop_toBottomOf="@+id/textNickName" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/botonIniciar"
         style="@style/Widget.AppCompat.ActionButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -103,10 +107,11 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="25dp"
         android:background="#F44336"
+        android:scaleType="fitCenter"
         android:src="@android:drawable/ic_media_play"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/configButton"
+        app:layout_constraintEnd_toStartOf="@+id/configButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+        app:layout_constraintTop_toTopOf="@+id/configButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

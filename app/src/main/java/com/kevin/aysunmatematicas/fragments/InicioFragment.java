@@ -1,13 +1,19 @@
 package com.kevin.aysunmatematicas.fragments;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
+import com.kevin.aysunmatematicas.CommFrag;
 import com.kevin.aysunmatematicas.R;
 
 /**
@@ -25,6 +31,14 @@ public class InicioFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    ImageButton iniciarButton;
+    View vista;
+    Activity actividad;
+    CommFrag interfaz;
+    ImageButton configButton;
+    ImageButton usersButton;
+    ImageButton helpuButton;
+
 
     public InicioFragment() {
         // Required empty public constructor
@@ -60,7 +74,56 @@ public class InicioFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        vista=inflater.inflate(R.layout.fragment_inicio2, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inicio2, container, false);
+        iniciarButton=vista.findViewById(R.id.botonIniciar);
+        configButton=vista.findViewById(R.id.configButton);
+        helpuButton=vista.findViewById(R.id.helpoButton);
+        usersButton=vista.findViewById(R.id.userButton);
+        addEventsMenu();
+
+
+        return vista;
+
+    }
+
+    private void addEventsMenu() {
+        iniciarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(getContext(),"Iniciar Juego desde el fragment",Toast.LENGTH_SHORT).show();
+                interfaz.iniciarJuego();
+            }
+        });
+        configButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(getContext(),"Iniciar Juego desde el fragment",Toast.LENGTH_SHORT).show();
+                interfaz.callSettings();
+            }
+        });
+        helpuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(getContext(),"Iniciar Juego desde el fragment",Toast.LENGTH_SHORT).show();
+                interfaz.callInstrucciones();
+            }
+        });
+        usersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(getContext(),"Iniciar Juego desde el fragment",Toast.LENGTH_SHORT).show();
+                interfaz.callUsers();
+            }
+        });
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof Activity){
+            actividad= (Activity) context;
+            interfaz = (CommFrag) actividad;
+        }
     }
 }
