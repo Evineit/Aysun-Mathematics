@@ -5,5 +5,6 @@ public interface CommFrag {
     public void callUsers();
     public void callSettings();
     public void callInstrucciones();
+    public void callMenu();
 
 }

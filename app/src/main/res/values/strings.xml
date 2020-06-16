@@ -6,4 +6,11 @@
     <string name="tab_text_1">Ayuda</string>
     <string name="tab_text_2">Ayuda Nombre</string>
     <string name="title_activity_help">helpActivity</string>
+    <string name="nombre">Nombre</string>
+    <string name="textview">TextView</string>
+    <string name="textpart1">TextPart1</string>
+    <string name="buttonPart1">Button</string>
+    <string name="buttonPart3">Button</string>
+    <string name="buttonPart2">Button</string>
+    <string name="textRes"></string>
 </resources>

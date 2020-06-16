@@ -2,15 +2,18 @@ package com.kevin.aysunmatematicas.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kevin.aysunmatematicas.CommFrag;
@@ -74,12 +77,17 @@ public class InicioFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        vista=inflater.inflate(R.layout.fragment_inicio2, container, false);
         // Inflate the layout for this fragment
+        vista=inflater.inflate(R.layout.fragment_inicio2, container, false);
+
         iniciarButton=vista.findViewById(R.id.botonIniciar);
         configButton=vista.findViewById(R.id.configButton);
         helpuButton=vista.findViewById(R.id.helpoButton);
         usersButton=vista.findViewById(R.id.userButton);
+        TextView nick = vista.findViewById(R.id.textNickName);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String nickName = preferences.getString("Nick","Nombre");
+        nick.setText(nickName);
         addEventsMenu();
 
 
