@@ -13,4 +13,8 @@
     <string name="buttonPart3">Button</string>
     <string name="buttonPart2">Button</string>
     <string name="textRes"></string>
+    <string name="add_word">noDesc</string>
+    <string name="hint_word">Delete?...</string>
+    <string name="button_save">Delete</string>
+    <string name="not_deleted">List not deleted.</string>
 </resources>

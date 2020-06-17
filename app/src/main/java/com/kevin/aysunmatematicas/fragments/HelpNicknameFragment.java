@@ -62,5 +62,8 @@ public class HelpNicknameFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_help_nickname, container, false);
+
     }
+
+
 }

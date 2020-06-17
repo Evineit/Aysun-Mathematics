@@ -1,16 +1,15 @@
 package com.kevin.aysunmatematicas;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+
+import com.kevin.aysunmatematicas.activities.ScoresActivity;
 import com.kevin.aysunmatematicas.fragments.InicioFragment;
 import com.kevin.aysunmatematicas.fragments.UsersFragment;
 
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements CommFrag{
         usersFragment = new UsersFragment();
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        SharedPreferences.Editor editor = preferences.edit();
         String nickName = preferences.getString("Nick","Nombre");
         if (!nickName.equalsIgnoreCase("nombre") && !nickName.trim().isEmpty()) {
             fragmentManager.beginTransaction().add(R.id.contenedor, inicioFragment).commit();
@@ -39,6 +37,15 @@ public class MainActivity extends AppCompatActivity implements CommFrag{
 
 
     }
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
     public void iniciarJuego(){
         Intent intent = new Intent(MainActivity.this, GameActivity.class);
         startActivity(intent);
@@ -46,7 +53,9 @@ public class MainActivity extends AppCompatActivity implements CommFrag{
 
     @Override
     public void callSettings() {
-        Toast.makeText(getApplicationContext(),"Iniciar Juego2",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(),"Iniciar Juego2",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, ScoresActivity.class);
+        startActivity(intent);
 
     }
 
@@ -68,7 +77,9 @@ public class MainActivity extends AppCompatActivity implements CommFrag{
     @Override
     public void callUsers() {
 //        Toast.makeText(getApplicationContext(),"Iniciar Juego4",Toast.LENGTH_SHORT).show();
-        fragmentManager.beginTransaction().replace(R.id.contenedor,usersFragment).commit();
+        fragmentManager.beginTransaction().replace(R.id.contenedor,usersFragment)
+                .addToBackStack("fragment")
+                .commit();
 
     }
 
