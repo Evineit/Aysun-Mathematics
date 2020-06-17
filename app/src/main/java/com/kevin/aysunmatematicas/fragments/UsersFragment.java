@@ -4,10 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +12,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
 import com.kevin.aysunmatematicas.CommFrag;
 import com.kevin.aysunmatematicas.R;
-
-import java.util.jar.Attributes;
 
 /**
  * A simple {@link Fragment} subclass.
