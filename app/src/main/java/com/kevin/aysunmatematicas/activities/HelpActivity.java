@@ -1,4 +1,4 @@
-package com.kevin.aysunmatematicas;
+package com.kevin.aysunmatematicas.activities;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.preference.PreferenceManager;
 import android.view.View;
 
+import com.kevin.aysunmatematicas.R;
 import com.kevin.aysunmatematicas.ui.main.SectionsPagerAdapter;
 
 public class HelpActivity extends AppCompatActivity {

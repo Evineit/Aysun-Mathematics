@@ -1,4 +1,4 @@
-package com.kevin.aysunmatematicas;
+package com.kevin.aysunmatematicas.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,11 +9,12 @@ import android.preference.PreferenceManager;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.kevin.aysunmatematicas.activities.ScoresActivity;
+import com.kevin.aysunmatematicas.CommFrag;
+import com.kevin.aysunmatematicas.R;
 import com.kevin.aysunmatematicas.fragments.InicioFragment;
 import com.kevin.aysunmatematicas.fragments.UsersFragment;
 
-public class MainActivity extends AppCompatActivity implements CommFrag{
+public class MainActivity extends AppCompatActivity implements CommFrag {
     FragmentManager fragmentManager = getSupportFragmentManager();
 //    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
     UsersFragment usersFragment;

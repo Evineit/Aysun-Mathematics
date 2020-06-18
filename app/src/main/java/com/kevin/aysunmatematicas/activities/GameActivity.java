@@ -1,4 +1,4 @@
-package com.kevin.aysunmatematicas;
+package com.kevin.aysunmatematicas.activities;
 
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.kevin.aysunmatematicas.R;
 import com.kevin.aysunmatematicas.dbutil.Score;
 import com.kevin.aysunmatematicas.dbutil.ScoresViewModel;
 
