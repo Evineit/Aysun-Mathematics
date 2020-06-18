@@ -123,7 +123,7 @@ public class GameActivity extends AppCompatActivity {
             defChallenge();
             incrementPoints();
         }else {
-            Toast.makeText(getApplicationContext(),"Wrong",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Vuelve a intentarlo",Toast.LENGTH_SHORT).show();
         }
     }
 
